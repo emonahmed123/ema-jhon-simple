@@ -36,8 +36,8 @@ const Shop = () => {
       
 }
 else{
-const rest =cart.filter(product =>product.id !==Selectedproduct.product)
-exists.quantity= exists.quantity+1;
+const rest =cart.filter(product =>product.id !==Selectedproduct.id)
+exists.quantity= exists.quantity +1;
 newCart =[...rest,exists]
 }
  

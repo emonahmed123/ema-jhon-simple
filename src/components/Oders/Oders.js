@@ -4,7 +4,7 @@ import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import Cart from '../Cart/Cart';
 import Reviewitem from '../Reviewitem/Reviewitem';
-
+import{ removeFromDb}from'../../utilities/fakedb'
 
 
 const Oders = () => {
@@ -12,7 +12,9 @@ const Oders = () => {
       const [cart,setCart] =useCart(products)
        const handleRemoveProduct = product =>{
        const rest  =cart.filter (pd=> pd.id !== product.id)
-        setCart(rest);
+ 
+       setCart(rest);
+       removeFromDb(product.id)
      
        }
       return (
