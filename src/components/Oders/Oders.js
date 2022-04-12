@@ -26,7 +26,7 @@ const Oders = () => {
                </div>  
                <div className='cart-container'>
           <Cart cart={cart}>
-                     <Link to="/inventory">
+                     <Link to="/shipment">
                       <button>Proceed Checkout</button>
                      </Link>
 
